@@ -67,7 +67,7 @@ var $banner=(function(){
         $($navs[i]).click(function(){
           index = i+1;
           navs();
-          jump(slider,{left: -1200*index},null);
+          jump({left: -1200*index},null);
         })
       })(i);
     }
@@ -93,7 +93,7 @@ var $banner=(function(){
     function pre(){
       index--;
       navs();
-      jump(slider,{left: -1200*index}, function(){
+      jump({left: -1200*index}, function(){
         if(index == 0){
           $slider.css({'left':'-6000px'});
           //slider.style.left = "-6000px";
@@ -111,7 +111,7 @@ var $banner=(function(){
     function next(){
       index++;
       navs();
-      jump(slider,{left: -1200*index}, function(){
+      jump({left: -1200*index}, function(){
         if(index == 6){
           $slider.css({'left':'-1200px'});
           //slider.style.left = "-1200px";
@@ -128,7 +128,7 @@ var $banner=(function(){
         $($navs[i]).click(function(){
           index = i+1;
           navs();
-          jump(slider,{left: -1200*index},null);
+          jump({left: -1200*index},null);
         })
       })(i);
     }
@@ -159,7 +159,7 @@ var $banner=(function(){
       }
     }
 
-    function jump(slider,b, callback){
+    function jump(b, callback){
       //var timer = slider.timer;
       clearInterval(slider.timer);
       slider.timer = setInterval(function(){
